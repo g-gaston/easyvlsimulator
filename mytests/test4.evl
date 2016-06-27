@@ -1,0 +1,26 @@
+// module test4, components
+
+module test4_components;
+
+	wire a, b, c, d, g, x, y, p, o, u, i, clk;
+
+	wire [3:0] h;
+
+	wire [3:0] e, f;
+
+	evl_clock c_1(clk);
+
+	evl_one ones(c, a);
+	evl_zero zeros(b, d, h);
+	and and1(e[0], a, b);
+	and and2(e[1], b, b);
+	and and4(p, a, d);
+	tris tris1(o, p, clk);
+	or or1(f[0], a, c);
+	or or2(f[1], a, c);
+	xor xor3(g, b, d);
+	buf buf1(x, h[1]);
+	evl_dff(i, a, clk);
+	evl_output out1(e[0], f[1], g, i, x);
+
+endmodule

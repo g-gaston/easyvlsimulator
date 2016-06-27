@@ -1,0 +1,21 @@
+// module test2, components
+
+module test2_components;
+
+	wire a, b, c, d;
+
+	wire h, x, i;
+
+	wire e, f, g;
+
+	evl_one ones(a, c);
+	evl_zero zeros(b, d);
+	and and1(e, a, b);
+	or or2(f, a, c);
+	xor xor3(g, b, d);
+	not not1(h, g);
+	buf buf1(i, h);
+	evl_dff(x, g, a);
+	evl_output out1(e, f, g, h);
+
+endmodule

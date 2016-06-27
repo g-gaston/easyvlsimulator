@@ -1,0 +1,40 @@
+// module test1, wires
+
+module test1_wires;
+	//wire a, b, c, d, e, f, g, h, i, x;
+	//wire [7:0] y, w, z, l;
+	//wire [1:0] j;
+	wire [7:0] l;
+
+	evl_zero zeros(l[0], l[7:2]);
+	ones_test testone(l[1]);
+	//evl_zero zeros(b, d, y[7:0]);
+	//testmodule_and test_and(a, y[0], e);
+	//and and1(e, a, b);
+	//assign z[2] = y[4];
+	//assign w[4:0] = y[6:2];
+	//assign w[5] = a;
+	//assign w[7:6] = j;
+	//or or2(f, a, z[2]);
+	//testmodule_and test_and(b, d, g);
+	//not not1(h, g);
+	evl_output out1(l);
+
+endmodule
+
+module testmodule_and(input a, input b, output c);
+
+	and and1(c, a, b);
+
+endmodule
+
+module testmodule_and_2(input a, input b, output c);
+
+	and and1(c, a, b);
+
+endmodule
+
+module ones_test(output a);
+	evl_one ones_module(a);
+endmodule
+
